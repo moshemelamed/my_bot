@@ -5,7 +5,7 @@ from bottle import route, run, template, static_file, request
 import json
 import requests
 from bs4 import BeautifulSoup
-
+from sys import argv
 
 
 url = ["https://www.theguardian.com/news/datablog/2009/sep/08/baby-names-children-jack-olivia-mohammed",
@@ -142,7 +142,7 @@ def images(filename):
 
 
 def main():
-    run(host='localhost', port=7000)
+    run(host='0.0.0.0', port=argv[1])
 
 
 if __name__ == '__main__':
